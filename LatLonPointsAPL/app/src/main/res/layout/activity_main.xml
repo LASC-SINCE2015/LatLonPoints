@@ -7,15 +7,111 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/MainTextView"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/lat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        android:text="緯度"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lon_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="経度"
+        app:layout_constraintTop_toBottomOf="@+id/lat_text"
+        app:layout_constraintStart_toStartOf="@+id/lat_text" />
+
+    <EditText
+        android:id="@+id/lat_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="緯度入力"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lat_text"
+        app:layout_constraintEnd_toEndOf="parent"         />
+
+    <EditText
+        android:id="@+id/lon_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="経度入力"
+        app:layout_constraintTop_toBottomOf="@+id/lat_input"
+        app:layout_constraintStart_toEndOf="@+id/lon_text"
+        app:layout_constraintEnd_toEndOf="parent"         />
+
+    <TextView
+        android:id="@+id/x_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="X"
+        app:layout_constraintTop_toBottomOf="@+id/lon_text"
+        app:layout_constraintStart_toStartOf="@+id/lon_text" />
+
+    <TextView
+        android:id="@+id/y_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Y"
+        app:layout_constraintTop_toBottomOf="@+id/x_text"
+        app:layout_constraintStart_toStartOf="@+id/x_text" />
+
+    <EditText
+        android:id="@+id/x_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="X入力"
+        app:layout_constraintTop_toBottomOf="@+id/lon_input"
+        app:layout_constraintStart_toEndOf="@+id/x_text"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/y_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Y入力"
+        app:layout_constraintTop_toBottomOf="@+id/x_input"
+        app:layout_constraintStart_toEndOf="@+id/y_text"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Button
+        android:id="@+id/latlot2xy_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="緯度経度⇒XY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/xy2latlot_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XY⇒緯度経度"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/latlot2xy_button" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
